@@ -1,3 +1,3 @@
-# avisos
+# sails_telegram_messages
 
-a [Sails](http://sailsjs.org) application
+Example using sails to register and send messages to users, using the api of telegram.
