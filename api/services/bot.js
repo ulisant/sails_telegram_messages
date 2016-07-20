@@ -1,5 +1,5 @@
 var telebot = require('node-telegram-bot-api');
-var token = '237396292:AAE3jyDr43QshfEgobd6folKDcmZikY1JMs'
+var token = 'your token'
 var users = {}
 
 var bot = new telebot(token, {
