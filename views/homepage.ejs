@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Bot name: @UlisantBot</h1>
+    <h3>Comandos disponibles:</h3>
+    <table class="table table-hover">
+     <thead>
+       <tr>
+         <th>Comando</th>
+         <th>Parametros</th>
+         <th>Función</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td><kbd>/saludo</kbd></td>
+         <td>Texto</td>
+         <th>regresa un saludo con el nombre del usuario</th>
+       </tr>
+       <tr>
+         <td><kbd>/donde</kbd></td>
+         <td>No</td>
+         <th>regresa una ubicación</th>
+       </tr>
+       <tr>
+         <td><kbd>/foto</kbd></td>
+         <td>No</td>
+         <th>regresa un imagen</th>
+       </tr>
+       <tr>
+         <td><kbd>/sticker</kbd></td>
+         <td>No</td>
+         <th>regresa un sticker</th>
+       </tr>
+       <tr>
+         <td><kbd>/start</kbd></td>
+         <td>No</td>
+         <th>Registra al usuario al sistema de avisos</th>
+       </tr>
+     </tbody>
+   </table>
+
+   <h3>Sistema de avisos:</h3>
+   <form role="form" action="/" method="post">
+      <div class="form-group">
+        <label for="sel1">Selecciona un usuario:</label>
+        <select class="form-control" id="sel1" name="sel">
+          <% for(var key in myUsers) {%>
+              <option value="<%= myUsers[key].id_us %>"><%= myUsers[key].name %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
